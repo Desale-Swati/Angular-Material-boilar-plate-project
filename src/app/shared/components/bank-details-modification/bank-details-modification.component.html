@@ -1,0 +1,120 @@
+<div class="container">
+    <form [formGroup]="bankdetailsModification">
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+            <!-- content here -->
+            <div fxLayout="row wrap">
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Name</mat-label>
+                        <input matInput placeholder="Add1" formControlName='bankName' />
+                        <mat-error *ngIf="
+                             bankdetailsModification.controls['bankName'].hasError('required')">
+                            Bank Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label> Bank CODE (only for Trading)</mat-label>
+                        <input matInput placeholder="Bank CODE (only for Trading)" formControlName='bankCode' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankCode'].hasError('required')">
+                            Bank CODE (only for Trading) is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Account No</mat-label>
+                        <input matInput placeholder="Bank Account No" formControlName='bankAccountNo' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankAccountNo'].hasError('required')">
+                            Bank Account No is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Address 2</mat-label>
+                        <input matInput placeholder="Bank Address 2" formControlName='bankAddress2' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankAddress2'].hasError('required')">
+                            Bank Address 2 is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Pincode</mat-label>
+                        <input matInput placeholder="Bank Pincode" formControlName='bankPincode' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankPincode'].hasError('required')">
+                            Bank Pincode is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Account Currency</mat-label>
+                        <input matInput placeholder="Account Currency" formControlName='accountCurrency' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['accountCurrency'].hasError('required')">
+                            Account Currency is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+
+                </div>
+
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank IFSC CODE</mat-label>
+                        <input matInput placeholder="Bank IFSC CODE" formControlName='ifscCode' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['ifscCode'].hasError('required')">
+                            Bank IFSC CODE is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Account Type </mat-label>
+                        <input matInput placeholder="Bank Account Type" formControlName='bankAccountType' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankAccountType'].hasError('required')">
+                            Bank Account Type is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank Address1</mat-label>
+                        <input matInput placeholder="Bank Address1" formControlName='bankAddress1' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankAddress1'].hasError('required')">
+                            Bank Address1 is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank City</mat-label>
+                        <input matInput placeholder="Bank City" formControlName='bankCity' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankCity'].hasError('required')">
+                            Bank City is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Bank MICR code</mat-label>
+                        <input matInput placeholder="Bank MICR code" formControlName='bankMicrCode' />
+                        <mat-error *ngIf="
+                            bankdetailsModification.controls['bankMicrCode'].hasError('required')">
+                            Bank MICR code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <!-- <div fxLayout="row wrap" fxLayout.xs="column" width="30%">
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Save</button>
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Submit</button><br>
+                <button mat-button mat-raised-button color="primary">Cancle</button><br>
+
+            </div> -->
+        </div>
+    </form>
+
+</div>

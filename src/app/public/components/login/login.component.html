@@ -1,0 +1,50 @@
+<div class="loginContainer">
+    <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+        <div class="content-left">
+            <img src="../assets/1608202921_signup.png" height="auto" width="auto" />
+            <br>
+        </div>
+
+        <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(43%-10px)" fxFlex.gt-md="0 1 calc(35%-10px)">
+            <form class="matformfiled" [formGroup]="loginForm">
+                <mat-card-title> Welcome to</mat-card-title>
+                <h3>Common Modification System</h3>
+                <h2 style="color: #81003c; text-align: center;">Login</h2>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="username" style="color: #81003c" formControlName='userName' />
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                    <mat-error *ngIf="
+                                  loginForm.controls['userName'].hasError('required')
+                                  ">
+                        User Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="***********" type="password" style="color: #81003c" formControlName='Password' />
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                    <mat-error *ngIf="
+              loginForm.controls['Password'].hasError('required')
+              ">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-card-actions class="btnside">
+                    <button mat-raised-button color="primary" (click)="login()">
+                    Login
+                  </button>
+                    <button mat-raised-button style="margin:10px;">Cancel</button>
+                    <br>
+                    <span>
+                    <a style="margin-left: 5%;" routerLink="/forgot-password">Forgot Your Password ? </a>
+                  </span>
+                </mat-card-actions>
+
+            </form>
+        </mat-card>
+    </div>
+
+</div>

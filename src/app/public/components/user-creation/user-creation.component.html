@@ -1,0 +1,102 @@
+<div class="container">
+
+    <form [formGroup]="userCreationForm">
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+            <!-- content here -->
+            <div fxLayout="row wrap">
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>User Search</mat-label>
+                        <input type="text" placeholder="Search Here" formControlName='userSearch' matInput />
+                        <mat-icon matSuffix>search</mat-icon>
+                        <mat-error *ngIf="
+                    userCreationForm.controls['userSearch'].hasError('required')">
+                            User Search is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Employee ID </mat-label>
+                        <input matInput placeholder="Employee ID" formControlName='employeeID' />
+                        <mat-error *ngIf="userCreationForm.controls['employeeID'].hasError('required')">
+                            Employee ID is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Email </mat-label>
+                        <input matInput placeholder="Email" formControlName='email' />
+                        <mat-error *ngIf="userCreationForm.controls['email'].hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Title </mat-label>
+                        <input matInput placeholder="Title " formControlName='title' />
+                        <mat-error *ngIf="userCreationForm.controls['title'].hasError('required')">
+                            Title is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Role </mat-label>
+                        <mat-select placeholder="Role" formControlName='role' multiple>
+                            <mat-option></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>User ID </mat-label>
+                        <input matInput placeholder="User ID" formControlName='userID' />
+                        <mat-error *ngIf="userCreationForm.controls['userID'].hasError('required')">
+                            User ID is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- <div class="togglebutton">
+                        <mat-slide-toggle>Status</mat-slide-toggle>
+                        <mat-slide-toggle>Allow Notification</mat-slide-toggle>
+                        <mat-slide-toggle>Include Course </mat-slide-toggle>
+                    </div> -->
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Name </mat-label>
+                        <input matInput placeholder="Name" formControlName='name' />
+                        <mat-error *ngIf="userCreationForm.controls['name'].hasError('required')">
+                            Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Manager Name </mat-label>
+                        <input matInput placeholder=" Manager Name" formControlName='managerName' />
+                        <mat-error *ngIf="userCreationForm.controls['managerName'].hasError('required')">
+                            Manager Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Manager Email </mat-label>
+                        <input matInput placeholder="Manager Email" formControlName='managerEmail' />
+                        <mat-error *ngIf="userCreationForm.controls['managerEmail'].hasError('required')">
+                            Manager Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Status </mat-label>
+                        <mat-select placeholder="Site" formControlName='site' multiple>
+                            <mat-option></mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="userCreationForm.controls['site'].hasError('required')">
+                            Status is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayout.xs="column" width="30%">
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Save</button>
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Submit</button><br>
+                <button mat-button mat-raised-button color="primary">Cancle</button><br>
+
+            </div>
+        </div>
+    </form>
+</div>

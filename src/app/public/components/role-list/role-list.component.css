@@ -1,0 +1,151 @@
+/* .app-container {
+    height: 94vh;
+    width: 100%;
+    background-color: white;
+    
+}
+
+
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -54px;
+    height: 100vh;
+} */
+
+
+/* 
+.custom__mat-drawer {
+    margin-top: 62px;
+    width: 234px;
+    background-color: #e1e8f0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 85vh;
+}
+
+.logout__button {
+    position: absolute;
+    top: 66px;
+    right: 250px;
+    z-index: 3;
+    width: 150px;
+    height: 47px;
+    background-color: #81003c;
+    font-size: x-large;
+}
+
+.user__link {
+    position: absolute;
+    top: 78px;
+    right: 484px;
+    z-index: 3;
+    width: 107px;
+    height: 39px;
+    color: #81003c;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+.material-icons {
+    position: absolute;
+    top: 64px;
+    right: 593px;
+    z-index: 3;
+    font-size: xxx-large;
+} */
+
+.app-container {
+    height: 94vh;
+    width: 100%;
+    background-color: white;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -54px;
+}
+
+.custom__mat-drawer {
+    margin-top: 62px;
+    /* width: 234px; */
+    background-color: #e1e8f0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* height: 85vh; */
+}
+
+.logout__button {
+    position: absolute;
+    top: 66px;
+    right: 250px;
+    z-index: 3;
+    width: 150px;
+    height: 47px;
+    background-color: #81003c;
+    font-size: x-large;
+}
+
+.user__link {
+    position: absolute;
+    top: 78px;
+    right: 484px;
+    z-index: 3;
+    width: 107px;
+    height: 39px;
+    color: #81003c;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+.material-icons {
+    /* position: absolute; */
+    top: 30px;
+    right: 100px;
+    z-index: 2;
+    /* font-size: xxx-large; */
+}
+
+.padding {
+    padding-left: 16px;
+}
+
+.user-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.user-table th,
+.user-table td {
+    text-align: left;
+    padding: 8px;
+}
+
+.nav-spacer {
+    flex: 1 1 auto;
+}
+
+
+/* .user-table tr:nth-child(even) {
+    background-color: #f2f2f2
+  } */
+
+.user-table th {
+    background-color: #e1e8f0;
+    color: #81003c;
+}
+
+mat-card {
+    color: black;
+    background-color: white;
+    margin: 10px;
+    top: 0%;
+}
+
+
+/*   
+
+.mat-icon{
+     position: absolute;
+    top: 64px;    
+} */

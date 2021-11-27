@@ -1,0 +1,132 @@
+<div class="container">
+    <form [formGroup]="addressPermanent">
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+            <!-- content here -->
+            <div fxLayout="row wrap">
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Add1</mat-label>
+                        <input matInput placeholder="Add1" formControlName='add1' />
+                        <mat-error *ngIf="
+                             addressPermanent.controls['add1'].hasError('required')">
+                            Add1 is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label> Locality</mat-label>
+                        <input matInput placeholder="Locality" formControlName='locality' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['locality'].hasError('required')">
+                            Locality is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Pincode</mat-label>
+                        <input matInput placeholder="pincode" formControlName='pincode' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['pincode'].hasError('required')">
+                            Pincode is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>State Code(CDSL)</mat-label>
+                        <input matInput placeholder="State Code(CDSL)" formControlName='stateCode' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['stateCode'].hasError('required')">
+                            State Code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Country Code</mat-label>
+                        <input matInput placeholder="Country Code" formControlName='countryCode' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['countryCode'].hasError('required')">
+                            Country Code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>User Remark(NSDL)</mat-label>
+                        <mat-select formControlName='userRemark'>
+                            <mat-option>
+
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="
+                              addressPermanent.controls['userRemark'].hasError('required')
+                          ">
+                            User Remark is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Add2</mat-label>
+                        <input matInput placeholder="Add2" formControlName='add2' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['add2'].hasError('required')">
+                            Add2 is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>City </mat-label>
+                        <input matInput placeholder="city" formControlName='city' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['city'].hasError('required')">
+                            City is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>State Code for foreign/correspondence address</mat-label>
+                        <input matInput placeholder="State Code for foreign/correspondence address" formControlName='correspondenceAddress' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['correspondenceAddress'].hasError('required')">
+                            State Code for foreign/correspondence address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field> -->
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label> City Sequence(CDSL)</mat-label>
+                        <input matInput placeholder=" City Sequence(CDSL)" formControlName='citySequence' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['citySequence'].hasError('required')">
+                            City Sequence(CDSL) is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>BO Sub Status(CDSL)</mat-label>
+                        <input matInput placeholder="BO Sub Status(CDSL)" formControlName='boSubStatus' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['boSubStatus'].hasError('required')">
+                            BO Sub Status is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>File Name</mat-label>
+                        <input matInput placeholder="BO Sub Status(CDSL)" formControlName='fileName' />
+                        <mat-error *ngIf="
+                            addressPermanent.controls['fileName'].hasError('required')">
+                            File Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <!-- <div fxLayout="row wrap" fxLayout.xs="column" width="30%">
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Save</button>
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Submit</button><br>
+                <button mat-button mat-raised-button color="primary">Cancle</button><br>
+
+            </div> -->
+        </div>
+    </form>
+
+</div>

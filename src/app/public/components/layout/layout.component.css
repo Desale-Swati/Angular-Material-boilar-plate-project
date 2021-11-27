@@ -1,0 +1,46 @@
+.app-container {
+    background-color: white;
+    display: contents;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    text-align: center;
+}
+
+.custom__mat-drawer {
+    margin-top: 62px;
+}
+
+.logout__button {
+    position: absolute;
+    top: 66px;
+    right: 250px;
+    z-index: 3;
+    width: 150px;
+    height: 47px;
+    background-color: #81003c;
+    font-size: x-large;
+}
+
+.user__link {
+    position: absolute;
+    top: 78px;
+    right: 484px;
+    z-index: 3;
+    width: 107px;
+    height: 39px;
+    color: #81003c;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+.material-icons {
+    position: absolute;
+    top: 64px;
+    right: 593px;
+    z-index: 3;
+    font-size: xxx-large;
+}

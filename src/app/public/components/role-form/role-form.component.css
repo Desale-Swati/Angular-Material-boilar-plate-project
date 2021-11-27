@@ -1,0 +1,89 @@
+.container {
+    margin-top: 4%;
+}
+
+.buttoncontainer {
+    display: inline-block;
+    width: max-content;
+}
+
+::ng-deep.mat-select-value {
+    display: table-cell;
+    max-width: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    background-color: white;
+}
+
+::ng-deep.mat-select-panel {
+    min-width: 112 px;
+    max-width: 280 px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 256 px;
+    min-width: 100%;
+    border-radius: 4 px;
+    outline: 0;
+    background-color: white;
+}
+
+::ng-deep.mat-option-text {
+    display: inline-block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+}
+
+::ng-deep.mat-pseudo-checkbox {
+    color: black;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: white !important;
+    color: #81003c;
+    /* border: 1px solid black; */
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label {
+    background-color: white !important;
+    color: #81003c;
+}
+
+mat-label {
+    color: #81003c;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 10px;
+    color: #81003c;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: #c2185b;
+    width: 30%;
+}
+
+::ng-deep.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    /* background-color: rgba(176,190,197,.54); */
+    background-color: #c2185b;
+    border: 1px solid black;
+}
+
+.togglebutton {
+    color: black;
+    margin-left: 20px;
+}
+
+::ng-deep.mat-select-arrow {
+    background-color: #c2185b;
+}

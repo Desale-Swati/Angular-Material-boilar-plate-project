@@ -1,0 +1,30 @@
+<mat-card class="example-card" [ngClass]="data.color" >
+    <mat-card-title>{{data.title}}</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+     <div class="custom__row">
+       <div class="one">{{data.draft? "Draft" : " "}}</div>
+       <div class="two">{{data.draft? ":" : " "}}</div>
+       <div class="three">{{data.draft ? data.draft: " "}}</div>
+     </div>
+     <div class="custom__row">
+      <div class="one">Processed</div>
+      <div class="two">:</div>
+      <div class="three">{{data.processed}}</div>
+    </div>
+    <div class="custom__row">
+      <div class="one">InProcess</div>
+      <div class="two">:</div>
+      <div class="three">{{data.inprocess}}</div>
+    </div>
+    <div class="custom__row">
+      <div class="one">Total</div>
+      <div class="two">:</div>
+      <div class="three">{{data.total}}</div>
+    </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <button mat-button class="detail__button">Details</button>
+    </mat-card-actions>
+</mat-card>

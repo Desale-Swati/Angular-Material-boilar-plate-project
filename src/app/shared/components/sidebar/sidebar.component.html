@@ -1,0 +1,26 @@
+<div>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+            <span>CMS List </span>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <mat-list-item class="custom__mat-list" role="listitem" routerLink="/case-initiation">Case Initiated</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem" routerLink="/scrutiny">Scrutiny</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem" routerLink="/data-entry">Data Entry</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem" routerLink="/checker">Checker</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem">Import/Export</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem">Physical Verification</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem">Reports</mat-list-item>
+            <mat-list-item class="custom__mat-list" role="listitem" routerLink="/admin">Admin</mat-list-item>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+</div>

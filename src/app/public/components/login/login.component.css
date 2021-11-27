@@ -1,0 +1,38 @@
+.loginContainer {
+    margin: 5%;
+    margin-left: 10%;
+}
+
+mat-card {
+    background-color: white;
+    color: black;
+    width: auto;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: white !important;
+    color: #81003c;
+    /* border: 1px solid black; */
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label {
+    color: #81003c;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 10px;
+    color: #81003c;
+}
+
+mat-card-subtitle {
+    color: black;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}

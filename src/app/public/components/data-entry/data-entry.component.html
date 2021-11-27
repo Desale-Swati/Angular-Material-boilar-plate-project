@@ -1,0 +1,171 @@
+<div class="container">
+    <h1 style="color: black;">
+        DataEntry Form </h1>
+    <div>
+        <hr>
+    </div>
+    <form [formGroup]="dataEntry">
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+            <!-- content here -->
+            <div fxLayout="row wrap">
+                <div fxFlex="30" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Barcode</mat-label>
+                        <input matInput placeholder="Barcode" formControlName='barcode' />
+                        <mat-error *ngIf="
+                dataEntry.controls['barcode'].hasError('required')">
+                            Barcode is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Demet Account Number</mat-label>
+                        <input matInput placeholder="Demet Account number" formControlName='demetAccount_number' />
+                        <mat-error *ngIf="
+                dataEntry.controls['demetAccount_number'].hasError('required')">
+                            Demet Account Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>PAN Number</mat-label>
+                        <input matInput placeholder="PAN Number" formControlName='PAN_No' />
+                        <mat-error *ngIf="
+                          dataEntry.controls['PAN_No'].hasError('required')">
+                            PAN Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Inward Mode</mat-label>
+                        <mat-select formControlName='inwardMode'>
+                            <mat-option>
+
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="
+                dataEntry.controls['inwardMode'].hasError('required')
+                  ">
+                            Inward Mode is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Client Name Demet</mat-label>
+                        <input matInput placeholder="Client Name Demet" formControlName='clientname_demat' />
+                        <mat-error *ngIf="
+                  dataEntry.controls['clientname_demat'].hasError('required')">
+                            Client Name Demet is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Customer Mobile</mat-label>
+                        <input matInput placeholder="Customer Mobile" formControlName='customerMobile' />
+                        <mat-error *ngIf="
+                  dataEntry.controls['customerMobile'].hasError('required')">
+                            Customer Mobile is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>RM code & Email</mat-label>
+                        <input matInput placeholder="RM Code Email" formControlName='rmCode_email' />
+                        <mat-error *ngIf="
+                  dataEntry.controls['rmCode_email'].hasError('required')">
+                            RMCode Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxFlex="30" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>AWB Number</mat-label>
+                        <input matInput placeholder="AWB Number" formControlName='AWB_no' />
+                        <mat-error *ngIf="
+              dataEntry.controls['AWB_no'].hasError('required')">
+                            AWB Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Trading Account Number</mat-label>
+                        <input matInput placeholder="Trading Account Number" formControlName='tradingAccount_number' />
+                        <mat-error *ngIf="
+              dataEntry.controls['tradingAccount_number'].hasError('required')">
+                            Trading Account Number Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Receipt Date</mat-label>
+                        <input matInput [matDatepicker]="picker" placeholder="Receipt Date" formControlName='receiptDate'>
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-error *ngIf="
+            dataEntry.controls['receiptDate'].hasError('required')
+            ">
+                            Receipt Date is <strong>required</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Client Name Trading</mat-label>
+                        <input matInput placeholder="Client Name Trading" formControlName='clientname_trading' />
+                        <mat-error *ngIf="
+              dataEntry.controls['clientname_trading'].hasError('required')">
+                            Client Name Trading is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Customer Email</mat-label>
+                        <input matInput placeholder="Customer Email" formControlName='customerEmail' />
+                        <mat-error *ngIf="
+              dataEntry.controls['customerEmail'].hasError('required')">
+                            Customer Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Branch Code Email</mat-label>
+                        <input matInput placeholder="Branch Code Email" formControlName='branchCode_email' />
+                        <mat-error *ngIf="
+              dataEntry.controls['branchCode_email'].hasError('required')">
+                            Branch Code Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Request Type</mat-label>
+                        <mat-select formControlName='requestType'>
+                            <mat-option>
+
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="
+            dataEntry.controls['requestType'].hasError('required')
+              ">
+                            Request Type is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div class="vertical"></div>
+                <div fxFlex="30" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+                    <iframe src="assets/YogeshResume2experience.pdf" class="images"> </iframe>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayout.xs="column" width="30%">
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Save</button>
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Submit</button><br>
+                <button mat-button mat-raised-button color="primary">Cancle</button><br>
+
+            </div>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,56 @@
+.btnclass {
+    width: 30%;
+    margin: 10px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: white !important;
+    color: #81003c;
+    /* border: 1px solid black; */
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label {
+    color: #81003c;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 10px;
+    color: red;
+}
+
+hr {
+    border: 2px solid black;
+    margin-top: -15px;
+    margin-left: 21%;
+    margin-right: 3%;
+}
+
+mat-icon {
+    font-size: 60px;
+}
+
+mat-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.vertical {
+    border-left: 4px solid black;
+    height: 100%;
+    position: relative;
+    margin-left: 10px;
+}
+
+.images {
+    width: 100%;
+    margin-left: 10%;
+    height: 100%;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: #c2185b;
+    width: 30%;
+}

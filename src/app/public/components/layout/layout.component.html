@@ -1,0 +1,16 @@
+<app-header></app-header>
+<mat-drawer-container class="app-container">
+    <mat-drawer *ngIf="isLoggedIn" mode="side" class="custom__mat-drawer" opened>
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content class="app-content">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<!-- <ng-container *ngIf="isLoggedIn">
+  <span class="material-icons">
+    person
+  </span>
+  <a href="" target="" class="user__link">User 1</a>
+  <button mat-raised-button class="logout__button" (click)="logout()">Logout</button>
+</ng-container> -->

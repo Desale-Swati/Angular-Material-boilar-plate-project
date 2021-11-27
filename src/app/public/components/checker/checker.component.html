@@ -1,0 +1,101 @@
+<div class="container">
+    <h1 style="color: black;">Checker </h1>
+    <div>
+        <hr>
+    </div>
+    <form [formGroup]="checkerForm">
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+            <!-- content here -->
+            <div fxLayout="row wrap">
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Barcode</mat-label>
+                        <input matInput placeholder="Barcode" formControlName='barcode' />
+                        <mat-error *ngIf="
+                    checkerForm.controls['barcode'].hasError('required')">
+                            Barcode is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Demat Account Number</mat-label>
+                        <input matInput placeholder="Demet Account number" formControlName='dematAccount_number' />
+                        <mat-error *ngIf="
+                    checkerForm.controls['dematAccount_number'].hasError('required')">
+                            Demat Account Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label> Checker Remark</mat-label>
+                        <input matInput placeholder="Checker Remark" formControlName='checker_remark' />
+                        <mat-error *ngIf="
+                        checkerForm.controls['checker_remark'].hasError('required')">
+                            Checker Remark is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Rejection Remarks</mat-label>
+                        <mat-select placeholder="Rejection Remarks" formControlName='rejection_remarks' [(value)]="selectedToppings" multiple>
+                            <mat-option *ngFor="let request of rejectionRemark" [value]="request">{{request}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="checkerForm.controls['rejection_remarks'].hasError('required')">
+                            Rejection Remarks is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Branch Code </mat-label>
+                        <input matInput placeholder="Branch Code " formControlName='branchCode' />
+                        <mat-error *ngIf="checkerForm.controls['branchCode'].hasError('required')">
+                            Branch Code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex="50" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 5px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Trading Account Number</mat-label>
+                        <input matInput placeholder="Trading Account Number" formControlName='tradingAccount_number' />
+                        <mat-error *ngIf="checkerForm.controls['tradingAccount_number'].hasError('required')">
+                            Trading Account Number Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Request Type</mat-label>
+                        <mat-select placeholder="Request Type" formControlName='requestType' [(value)]="selectedToppings" multiple>
+                            <mat-option *ngFor="let request of requestType" [value]="request">{{request}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="checkerForm.controls['requestType'].hasError('required')">
+                            Request Type is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Checker Status</mat-label>
+                        <mat-select placeholder="Checker Status" formControlName='checker_status' [(value)]="selectedToppings" multiple>
+                            <mat-option *ngFor="let request of checkerStatus" [value]="request">{{request}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="checkerForm.controls['checker_status'].hasError('required')">
+                            Checker Status is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Employee Code</mat-label>
+                        <input matInput placeholder="Employee Code" formControlName='employeeCode' />
+                        <mat-error *ngIf="checkerForm.controls['employeeCode'].hasError('required')">
+                            Employee Code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayout.xs="column" width="30%">
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Save</button>
+                <button style="margin-right:20px" mat-button mat-raised-button color="primary">Submit</button><br>
+                <button mat-button mat-raised-button color="primary">Cancle</button><br>
+
+            </div>
+        </div>
+    </form>
+</div>
